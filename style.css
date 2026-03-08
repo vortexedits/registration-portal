@@ -1,0 +1,41 @@
+body{
+  background-color:#0A0322 ;
+  color: #FFFFFF;
+}
+header{
+  font-family: Fredoka;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.24;
+}
+main h1{
+  font-family: Raleway;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 0.5;
+  position: relative;
+  top:30px;
+}
+main button{
+  background: linear-gradient(to right,#9E0172,#740182);
+  height: 75px;
+  width: 200px;
+  position: absolute;
+  top:60%;
+  left: 23%;
+  border-top: 0px;
+  border-left: 0px;
+  border-radius:25px;
+}
+footer{
+  border-top: 2px solid #FFFFFF;
+  width:100%;
+  position: absolute;
+  bottom:0;
+  justify-content: center;
+  text-align: center;
+}
