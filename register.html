@@ -66,5 +66,24 @@
     <button id="twalaba-btn" onclick="window.location.href ='entrypage1.html'">TWALABA</button>
     <button id="general-btn" onclick="window.location.href ='entrypage1.html'">GENERAL</button>
   </main>
+  <script>
+    const twalabaBtn = document.getElementById('twalaba-btn');
+    const generalBtn = document.getElementById('general-btn');
+    const formData = {};
+
+    twalabaBtn.addEventListener('click',(e) => {
+      e.preventDefault();
+      formData.category = 'twalaba';
+      sessionStorage.setItem('formData', JSON.stringify(formData));
+      window.location.href = 'entrypage1.html';
+    });
+
+    generalBtn.addEventListener('click',(e) => {
+      e.preventDefault();
+      formData.category = 'general';
+      sessionStorage.setItem('formData', JSON.stringify(formData));
+      window.location.href = 'entrypage1.html';
+    });
+  </script>
 </body>
 </html>
