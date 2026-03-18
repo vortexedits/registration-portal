@@ -43,6 +43,7 @@
         }
         input{
             background-color:#3e3851;
+            color: #FFFFFF;
             font-family: Raleway;
             height: 40px;
             font-size: 20px;
@@ -58,15 +59,27 @@
         button{
             background: linear-gradient(to right,#9E0172,#740182);
             color:#FFFFFF;
-            height: 50px;
-            width: 100px;
+            height: 75px;
+            width: 200px;
             border-top: 0px;
             border-left: 0px;
             border-radius:25px;
-            position: absolute;
-            top:80%;
-            left: 23%;
+            font-size: 30px;
+            position: relative;
+            top:30px;
+            left: 30px;
         }
+        button:focus{
+            border:none;
+            outline:none;
+            animation: changesize 0.5s;
+            }
+
+@keyframes changesize{
+0%{transform: scale(100%);}
+50%{transform: scale(80%);}
+100%{transform: scale(100%);}
+}
     </style>
 </head>
 <body>
@@ -83,10 +96,48 @@
             <label for="team-head">TEAM HEAD</label><br>
             <input type="text" id="team-head" name="team-head"><br>
             <label for="phone-number">PHONE NUMBER:</label><br>
-            <input type="tel" id="phone-number" name="phone-number"><br>
+            <input type="number"min="1000000000" max="9999999999" id="phone-number" name="phone-number"><br>
             <button type="submit" id="submit">NEXT</button>
         </form>
     </main>
+    <script>
+        const instituteNameInput = document.getElementById('institute-name');
+        const institutePlace = instituteNameInput.value;
+        const placeInput = document.getElementById('place');
+        const place = placeInput.value;
+        const teamHeadInput = document.getElementById('team-head');
+        const teamHead = teamHeadInput.value;
+        const phoneNumberInput = document.getElementById('phone-number');
+        let phoneNumber = phoneNumberInput.value;
 
+        const button = document.getElementById('submit');
+
+        function validatephoneNumber(phoneNumber) {
+            const phoneRegex = /^\d{10}$/; // Regular expression for 10-digit phone number
+            if(phoneRegex.test(phoneNumber)){
+                return None
+            }else {
+                for (let index = 0; index < array.length; index++) {
+                    const element = array[index];
+                    
+                }
+            }
+        }
+
+        const  formData = sessionStorage.getItem('formData') ? JSON.parse(sessionStorage.getItem('formData')) : {};
+
+        button.addEventListener('click',(e) => {
+            e.preventDefault();
+            
+
+            formData.instituteName = institutePlace;
+            formData.place = place;
+            formData.teamHead = teamHead;
+            formData.phoneNumber = phoneNumber;
+            sessionStorage.setItem('formData', JSON.stringify(formData));
+            window.location.href = 'entrypage2.html';
+            
+        });
+    </script>
 </body>
 </html>
