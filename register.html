@@ -26,7 +26,16 @@
       top:7%;
       left:2%;
     }
-  
+    button :focus{
+      border:none;
+      outline:none;
+      animation: changesize 0.5s;
+}
+@keyframes changesize{
+0%{transform: scale(100%);}
+50%{transform: scale(80%);}
+100%{transform: scale(100%);}
+}
 #twalaba-btn{
   background: linear-gradient(to right,#9E0172,#740182);
   font-family: Raleway;

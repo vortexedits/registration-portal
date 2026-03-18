@@ -13,10 +13,27 @@
         body{
       background-color:#0A0322 ;
       color: #FFFFFF; 
+      font-family: Raleway;
         }
         h1{
             font-family: Raleway;
-            font-size: 40px;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            line-height: 0.5;
+            position: relative;
+            top: 20%;
+        }
+        main{
+            display: grid;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+        }
+        label{
+            font-family: Raleway;
+            font-size: 20px;
             display: flex;
             justify-content: left;
             text-align: left;
@@ -24,10 +41,52 @@
             position: relative;
             top:30px;
         }
+        input{
+            background-color:#3e3851;
+            font-family: Raleway;
+            height: 40px;
+            font-size: 20px;
+            border:none;
+            border-radius: 10px;
+            display: flex;
+            justify-content: left;
+            text-align: left;
+            line-height: 0.5;
+            position: relative;
+            top:30px;
+        }
+        button{
+            background: linear-gradient(to right,#9E0172,#740182);
+            color:#FFFFFF;
+            height: 50px;
+            width: 100px;
+            border-top: 0px;
+            border-left: 0px;
+            border-radius:25px;
+            position: absolute;
+            top:80%;
+            left: 23%;
+        }
     </style>
 </head>
 <body>
-    <h1>REGISTER</h1>
-    <h1 style="color:#c451c9 ;">HERE !!</h1>
+    <header>
+        <h1>Register</h1>
+        <h1 style="color:#c451c9 ;">Here !!</h1>
+    </header>
+    <main>
+        <form>
+            <label for="institute-name">INSTITUTION NAME</label><br>
+            <input type="text" id="institute-name" name="institute-name"><br>
+            <label for="place">PLACE</label><br>
+            <input type="text" id="place" name="place"><br>
+            <label for="team-head">TEAM HEAD</label><br>
+            <input type="text" id="team-head" name="team-head"><br>
+            <label for="phone-number">PHONE NUMBER:</label><br>
+            <input type="tel" id="phone-number" name="phone-number"><br>
+            <button type="submit" id="submit">NEXT</button>
+        </form>
+    </main>
+
 </body>
 </html>
